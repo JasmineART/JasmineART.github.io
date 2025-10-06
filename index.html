@@ -3,30 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chen - Portfolio</title>
+    <title>Jasmine Reeves-Thomas - Project Manager</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             box-sizing: border-box;
         }
-        
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        
         .card-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
         .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
-        
         .skill-bar {
             transition: width 1s ease-in-out;
         }
-        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -37,7 +32,6 @@
                 transform: translateY(0);
             }
         }
-        
         .fade-in-up {
             animation: fadeInUp 0.6s ease-out;
         }
@@ -45,15 +39,16 @@
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-gray-800">Alex Chen</div>
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-800">Jasmine Reeves-Thomas</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-purple-600 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-purple-600 transition-colors">About</a>
-                    <a href="#portfolio" class="text-gray-600 hover:text-purple-600 transition-colors">Portfolio</a>
-                    <a href="#contact" class="text-gray-600 hover:text-purple-600 transition-colors">Contact</a>
+                    <a href="#home" class="text-gray-600 hover:text-purple-600 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-purple-600 transition duration-300">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-purple-600 transition duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-purple-600 transition duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-purple-600 transition duration-300">Contact</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,123 +56,56 @@
                     </svg>
                 </button>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="#home" class="block text-gray-600 hover:text-purple-600 py-2">Home</a>
-                <a href="#about" class="block text-gray-600 hover:text-purple-600 py-2">About</a>
-                <a href="#portfolio" class="block text-gray-600 hover:text-purple-600 py-2">Portfolio</a>
-                <a href="#contact" class="block text-gray-600 hover:text-purple-600 py-2">Contact</a>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-purple-600">Home</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-purple-600">About</a>
+                <a href="#skills" class="block py-2 text-gray-600 hover:text-purple-600">Skills</a>
+                <a href="#projects" class="block py-2 text-gray-600 hover:text-purple-600">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-purple-600">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
-        <div class="text-center px-6 fade-in-up">
-            <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-white/20 flex items-center justify-center text-6xl">
-                👨‍💻
-            </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6">Alex Chen</h1>
-            <p class="text-xl md:text-2xl mb-8 text-white/90">Full Stack Developer & UI/UX Designer</p>
-            <p class="text-lg mb-12 max-w-2xl mx-auto text-white/80">
-                Crafting beautiful digital experiences with clean code and thoughtful design. 
-                Passionate about creating solutions that make a difference.
-            </p>
-            <div class="space-x-4">
-                <a href="#portfolio" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                    View My Work
-                </a>
-                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                    Get In Touch
-                </a>
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 text-center text-white">
+            <div class="fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Jasmine Reeves-Thomas</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Strategic Project Manager & Digital Transformation Leader</p>
+                <p class="text-lg mb-12 max-w-3xl mx-auto opacity-80">Driving successful project delivery through innovative methodologies, stakeholder alignment, and data-driven decision making.</p>
+                <div class="space-x-4">
+                    <a href="#projects" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">View My Work</a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300">Get In Touch</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    I'm a passionate developer with 5+ years of experience creating digital solutions 
-                    that combine functionality with beautiful design.
-                </p>
+                <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
             </div>
-            
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">My Journey</h3>
-                    <p class="text-gray-600 mb-6">
-                        Started as a curious computer science student, I've evolved into a full-stack developer 
-                        who loves solving complex problems and creating intuitive user experiences. 
-                        I believe great software should be both powerful and delightful to use.
-                    </p>
-                    <p class="text-gray-600 mb-8">
-                        When I'm not coding, you'll find me exploring new technologies, contributing to open source, 
-                        or enjoying a good cup of coffee while sketching out my next project idea.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700 font-medium">JavaScript/React</span>
-                                <span class="text-gray-600">95%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700 font-medium">Python/Django</span>
-                                <span class="text-gray-600">90%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-purple-600 h-2 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-700 font-medium">UI/UX Design</span>
-                                <span class="text-gray-600">85%</span>
-                            </div>
-                            <div class="bg-gray-200 rounded-full h-2">
-                                <div class="skill-bar bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
+                    <div class="w-64 h-64 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-8 flex items-center justify-center">
+                        <span class="text-6xl text-white">👩‍💼</span>
                     </div>
                 </div>
-                
-                <div class="bg-gray-50 p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Quick Facts</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-4">🎓</span>
-                            <div>
-                                <div class="font-semibold text-gray-800">Education</div>
-                                <div class="text-gray-600">BS Computer Science, Stanford University</div>
-                            </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Passionate About Delivering Excellence</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">With over 8 years of experience in project management, I specialize in leading cross-functional teams through complex digital transformations and strategic initiatives. My approach combines agile methodologies with traditional project management principles to ensure successful outcomes.</p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">I'm certified in PMP, Scrum Master, and have a proven track record of delivering projects on time and within budget while exceeding stakeholder expectations.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600">50+</div>
+                            <div class="text-gray-600">Projects Completed</div>
                         </div>
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-4">💼</span>
-                            <div>
-                                <div class="font-semibold text-gray-800">Experience</div>
-                                <div class="text-gray-600">5+ years in web development</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-4">🌍</span>
-                            <div>
-                                <div class="font-semibold text-gray-800">Location</div>
-                                <div class="text-gray-600">San Francisco, CA</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <span class="text-2xl mr-4">☕</span>
-                            <div>
-                                <div class="font-semibold text-gray-800">Coffee Consumed</div>
-                                <div class="text-gray-600">∞ cups and counting</div>
-                            </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600">98%</div>
+                            <div class="text-gray-600">Success Rate</div>
                         </div>
                     </div>
                 </div>
@@ -185,174 +113,252 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-6">
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">My Portfolio</h2>
-                <p class="text-xl text-gray-600">A selection of projects I'm proud to have worked on</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Core Skills</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                        <span class="text-6xl">🚀</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">TaskFlow App</h3>
-                        <p class="text-gray-600 mb-4">A modern project management tool with real-time collaboration features.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Live Demo</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
-                        <span class="text-6xl">🛍️</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">EcoShop Platform</h3>
-                        <p class="text-gray-600 mb-4">Sustainable e-commerce platform with carbon footprint tracking.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Python</span>
-                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Live Demo</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-48 bg-gradient-to-br from-pink-400 to-red-500 flex items-center justify-center">
-                        <span class="text-6xl">📱</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">FitTracker Mobile</h3>
-                        <p class="text-gray-600 mb-4">Cross-platform fitness app with AI-powered workout recommendations.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React Native</span>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Firebase</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-purple-600 hover:text-purple-800 font-medium">Live Demo</a>
-                            <a href="#" class="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Let's Work Together</h2>
-                <p class="text-xl text-gray-600">Have a project in mind? I'd love to hear about it!</p>
-            </div>
-            
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h3>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-8">Technical Skills</h3>
                     <div class="space-y-6">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-xl">📧</span>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Project Management</span>
+                                <span class="text-gray-600">95%</span>
                             </div>
-                            <div>
-                                <div class="font-semibold text-gray-800">Email</div>
-                                <div class="text-gray-600">alex.chen@email.com</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-xl">📱</span>
-                            </div>
-                            <div>
-                                <div class="font-semibold text-gray-800">Phone</div>
-                                <div class="text-gray-600">+1 (555) 123-4567</div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 95%"></div>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                                <span class="text-xl">🌐</span>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Agile/Scrum</span>
+                                <span class="text-gray-600">90%</span>
                             </div>
-                            <div>
-                                <div class="font-semibold text-gray-800">Social</div>
-                                <div class="text-gray-600">
-                                    <a href="#" class="text-purple-600 hover:text-purple-800 mr-4">LinkedIn</a>
-                                    <a href="#" class="text-purple-600 hover:text-purple-800 mr-4">GitHub</a>
-                                    <a href="#" class="text-purple-600 hover:text-purple-800">Twitter</a>
-                                </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Risk Management</span>
+                                <span class="text-gray-600">88%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700">Data Analysis</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-3">
+                                <div class="skill-bar bg-purple-600 h-3 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <div>
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-8">Tools & Platforms</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-2xl mb-2">📊</div>
+                            <div class="font-semibold">Jira</div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-2xl mb-2">📈</div>
+                            <div class="font-semibold">Asana</div>
                         </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required 
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-2xl mb-2">💼</div>
+                            <div class="font-semibold">Monday.com</div>
                         </div>
-                        <button type="submit" 
-                                class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                            Send Message
-                        </button>
-                    </form>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-2xl mb-2">📋</div>
+                            <div class="font-semibold">Trello</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-2xl mb-2">📊</div>
+                            <div class="font-semibold">MS Project</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                            <div class="text-2xl mb-2">💻</div>
+                            <div class="font-semibold">Slack</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl text-white">🏢</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Digital Transformation Initiative</h3>
+                        <p class="text-gray-600 mb-4">Led a company-wide digital transformation project, migrating legacy systems to cloud-based solutions. Reduced operational costs by 30% and improved efficiency by 45%.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Cloud Migration</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Change Management</span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-4">Duration: 18 months | Budget: $2.5M</div>
+                        <button onclick="showProject('project1')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">View Details</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <span class="text-6xl text-white">📱</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Mobile App Development</h3>
+                        <p class="text-gray-600 mb-4">Managed the development of a customer-facing mobile application from concept to launch. Achieved 100K+ downloads in the first quarter with 4.8-star rating.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Agile</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Cross-platform</span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-4">Duration: 12 months | Team: 15 members</div>
+                        <button onclick="showProject('project2')" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">View Details</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <span class="text-6xl text-white">🔧</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Process Optimization</h3>
+                        <p class="text-gray-600 mb-4">Redesigned and optimized key business processes using Lean Six Sigma methodologies. Reduced processing time by 60% and eliminated 40% of manual tasks.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Lean Six Sigma</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Automation</span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-4">Duration: 8 months | ROI: 250%</div>
+                        <button onclick="showProject('project3')" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300">View Details</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                        <span class="text-6xl text-white">🛡️</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Cybersecurity Implementation</h3>
+                        <p class="text-gray-600 mb-4">Orchestrated enterprise-wide cybersecurity upgrade including multi-factor authentication, endpoint protection, and security training programs.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Security</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Compliance</span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-4">Duration: 14 months | Budget: $1.8M</div>
+                        <button onclick="showProject('project4')" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">View Details</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                        <span class="text-6xl text-white">🏭</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">ERP System Integration</h3>
+                        <p class="text-gray-600 mb-4">Led the implementation of a new ERP system across multiple departments, streamlining operations and improving data visibility across the organization.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">ERP</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Integration</span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-4">Duration: 16 months | Team: 25 members</div>
+                        <button onclick="showProject('project5')" class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">View Details</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                        <span class="text-6xl text-white">🌱</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Sustainability Initiative</h3>
+                        <p class="text-gray-600 mb-4">Managed a comprehensive sustainability program to reduce carbon footprint by 40% through green technology adoption and process improvements.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Sustainability</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Green Tech</span>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-4">Duration: 24 months | Impact: 40% reduction</div>
+                        <button onclick="showProject('project6')" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition duration-300">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="project-title" class="text-3xl font-bold text-gray-800"></h2>
+                    <button onclick="closeProject()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                <div id="project-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+            <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
+            <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
+            <p class="text-xl mb-12 opacity-90">Ready to bring your next project to life? I'd love to hear about your challenges and discuss how we can achieve success together.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="opacity-80">jasmine.reeves.thomas@email.com</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+                    <p class="opacity-80">linkedin.com/in/jasmine-reeves-thomas</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                    <p class="opacity-80">+1 (555) 123-4567</p>
+                </div>
+            </div>
+
+            <form id="contact-form" class="max-w-2xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg text-gray-800" required>
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg text-gray-800" required>
+                </div>
+                <input type="text" placeholder="Subject" class="w-full px-4 py-3 rounded-lg text-gray-800 mb-6" required>
+                <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 rounded-lg text-gray-800 mb-6" required></textarea>
+                <button type="submit" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Send Message</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <div class="text-2xl font-bold mb-4">Alex Chen</div>
-            <p class="text-gray-400 mb-6">Building the future, one line of code at a time.</p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
-                <a href="#" class="text-gray-400 hover:text-white transition-colors">Email</a>
-            </div>
-            <div class="border-t border-gray-700 pt-8">
-                <p class="text-gray-400">&copy; 2024 Alex Chen. All rights reserved.</p>
-            </div>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Jasmine Reeves-Thomas. All rights reserved.</p>
+            <p class="text-gray-400 mt-2">Crafted with passion for project excellence</p>
         </div>
     </footer>
 
     <script>
         // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
 
@@ -366,54 +372,449 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
                 }
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
+        });
+
+        // Project data
+        const projects = {
+            project1: {
+                title: "Digital Transformation Initiative",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-8xl text-white">🏢</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Overview</h3>
+                            <p class="text-gray-600 mb-4">Led a comprehensive digital transformation initiative for a Fortune 500 manufacturing company, migrating from legacy on-premise systems to modern cloud-based solutions.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">$2.5M</div>
+                                    <div class="text-sm text-gray-600">Total Budget</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">18</div>
+                                    <div class="text-sm text-gray-600">Months Duration</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">45%</div>
+                                    <div class="text-sm text-gray-600">Efficiency Gain</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-blue-600">30%</div>
+                                    <div class="text-sm text-gray-600">Cost Reduction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Achievements</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Successfully migrated 15 legacy systems to AWS cloud infrastructure</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Trained 500+ employees on new digital tools and processes</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Implemented automated workflows reducing manual processing by 60%</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Achieved 99.9% system uptime during transition period</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Delivered project 2 months ahead of schedule</li>
+                        </ul>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Technologies & Methodologies</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">AWS Cloud</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Agile/Scrum</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Change Management</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Risk Assessment</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Stakeholder Management</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Timeline</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">Phase 1: Assessment & Planning (Months 1-3)</div>
+                                    <div class="text-gray-600">System audit, stakeholder interviews, migration strategy development</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">Phase 2: Infrastructure Setup (Months 4-8)</div>
+                                    <div class="text-gray-600">Cloud environment setup, security implementation, initial testing</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">Phase 3: Migration & Training (Months 9-15)</div>
+                                    <div class="text-gray-600">System migration, user training, process optimization</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">Phase 4: Go-Live & Support (Months 16-18)</div>
+                                    <div class="text-gray-600">Full deployment, monitoring, post-implementation support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            project2: {
+                title: "Mobile App Development",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-8xl text-white">📱</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Overview</h3>
+                            <p class="text-gray-600 mb-4">Managed the end-to-end development of a customer-facing mobile application for a retail chain, from initial concept through successful market launch.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-600">100K+</div>
+                                    <div class="text-sm text-gray-600">Downloads Q1</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-600">4.8</div>
+                                    <div class="text-sm text-gray-600">App Store Rating</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-600">15</div>
+                                    <div class="text-sm text-gray-600">Team Members</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-green-600">12</div>
+                                    <div class="text-sm text-gray-600">Months</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Key Features Delivered</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> User authentication and profile management</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Product catalog with advanced search and filtering</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Shopping cart and secure payment processing</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Order tracking and delivery notifications</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Loyalty program integration</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Push notifications and personalized recommendations</li>
+                        </ul>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Technical Stack</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full">React Native</span>
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full">Node.js</span>
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full">MongoDB</span>
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full">AWS</span>
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full">Firebase</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Development Phases</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">Discovery & Design (Months 1-2)</div>
+                                    <div class="text-gray-600">User research, wireframing, UI/UX design, technical architecture</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">MVP Development (Months 3-6)</div>
+                                    <div class="text-gray-600">Core features development, API integration, initial testing</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">Beta Testing (Months 7-9)</div>
+                                    <div class="text-gray-600">User acceptance testing, bug fixes, performance optimization</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-600 rounded-full mr-4"></div>
+                                <div class="flex-1">
+                                    <div class="font-semibold">Launch & Support (Months 10-12)</div>
+                                    <div class="text-gray-600">App store submission, marketing support, post-launch monitoring</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            project3: {
+                title: "Process Optimization",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-8xl text-white">🔧</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Overview</h3>
+                            <p class="text-gray-600 mb-4">Redesigned and optimized critical business processes using Lean Six Sigma methodologies to eliminate waste and improve operational efficiency.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-purple-600">60%</div>
+                                    <div class="text-sm text-gray-600">Time Reduction</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-purple-600">250%</div>
+                                    <div class="text-sm text-gray-600">ROI</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-purple-600">40%</div>
+                                    <div class="text-sm text-gray-600">Manual Tasks Eliminated</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-purple-600">8</div>
+                                    <div class="text-sm text-gray-600">Months</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Process Improvements</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Streamlined order processing workflow from 12 to 5 steps</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Implemented automated approval routing system</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Reduced document processing time from 3 days to 4 hours</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Eliminated redundant quality checkpoints</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Created standardized templates and procedures</li>
+                        </ul>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Methodologies Applied</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Lean Six Sigma</span>
+                            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Value Stream Mapping</span>
+                            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">DMAIC</span>
+                            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Kaizen</span>
+                            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Process Mining</span>
+                        </div>
+                    </div>
+                `
+            },
+            project4: {
+                title: "Cybersecurity Implementation",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <div class="h-64 bg-gradient-to-br from-red-400 to-red-600 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-8xl text-white">🛡️</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Overview</h3>
+                            <p class="text-gray-600 mb-4">Orchestrated a comprehensive cybersecurity upgrade across the enterprise to protect against evolving threats and ensure regulatory compliance.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-red-600">$1.8M</div>
+                                    <div class="text-sm text-gray-600">Investment</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-red-600">14</div>
+                                    <div class="text-sm text-gray-600">Months</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-red-600">100%</div>
+                                    <div class="text-sm text-gray-600">Compliance Rate</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-red-600">95%</div>
+                                    <div class="text-sm text-gray-600">Threat Reduction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Security Enhancements</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Deployed multi-factor authentication across all systems</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Implemented endpoint detection and response (EDR) solution</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Established 24/7 security operations center (SOC)</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Conducted company-wide security awareness training</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Implemented zero-trust network architecture</li>
+                        </ul>
+                    </div>
+                `
+            },
+            project5: {
+                title: "ERP System Integration",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <div class="h-64 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-8xl text-white">🏭</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Overview</h3>
+                            <p class="text-gray-600 mb-4">Led the implementation of a comprehensive ERP system across multiple departments to unify business processes and improve data visibility.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-orange-600">25</div>
+                                    <div class="text-sm text-gray-600">Team Members</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-orange-600">16</div>
+                                    <div class="text-sm text-gray-600">Months</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-orange-600">8</div>
+                                    <div class="text-sm text-gray-600">Departments</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-orange-600">50%</div>
+                                    <div class="text-sm text-gray-600">Reporting Speed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Implementation Highlights</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Integrated finance, HR, supply chain, and manufacturing modules</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Migrated 10 years of historical data with 99.9% accuracy</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Trained 200+ users across all departments</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Achieved real-time reporting and analytics capabilities</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Reduced month-end closing time from 10 to 3 days</li>
+                        </ul>
+                    </div>
+                `
+            },
+            project6: {
+                title: "Sustainability Initiative",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <div class="h-64 bg-gradient-to-br from-teal-400 to-teal-600 rounded-lg flex items-center justify-center mb-6">
+                                <span class="text-8xl text-white">🌱</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Project Overview</h3>
+                            <p class="text-gray-600 mb-4">Managed a comprehensive sustainability program to reduce the company's environmental impact through green technology adoption and process improvements.</p>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-teal-600">40%</div>
+                                    <div class="text-sm text-gray-600">Carbon Reduction</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-teal-600">24</div>
+                                    <div class="text-sm text-gray-600">Months</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-teal-600">$2.1M</div>
+                                    <div class="text-sm text-gray-600">Annual Savings</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-teal-600">85%</div>
+                                    <div class="text-sm text-gray-600">Renewable Energy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Green Initiatives</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Installed solar panels across 5 facility rooftops</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Implemented smart building automation systems</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Launched company-wide recycling and waste reduction program</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Transitioned fleet to hybrid and electric vehicles</li>
+                            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Achieved LEED Gold certification for headquarters</li>
+                        </ul>
+                    </div>
+                `
+            }
+        };
+
+        // Show project details
+        function showProject(projectId) {
+            const project = projects[projectId];
+            if (project) {
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-content').innerHTML = project.content;
+                document.getElementById('project-modal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Close project modal
+        function closeProject() {
+            document.getElementById('project-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('project-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProject();
+            }
         });
 
         // Contact form submission
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Get form data
             const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+            const name = this.querySelector('input[placeholder="Your Name"]').value;
+            const email = this.querySelector('input[placeholder="Your Email"]').value;
+            const subject = this.querySelector('input[placeholder="Subject"]').value;
+            const message = this.querySelector('textarea').value;
             
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
+            // Show success message
+            alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon at ${email}.`);
             
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon!`);
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1500);
+            // Reset form
+            this.reset();
         });
 
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('bg-white/95');
-                nav.classList.remove('bg-white/90');
-            } else {
-                nav.classList.add('bg-white/90');
-                nav.classList.remove('bg-white/95');
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const skillsSection = document.getElementById('skills');
+            const rect = skillsSection.getBoundingClientRect();
+            
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 200);
+                });
+            }
+        }
+
+        // Trigger skill bar animation on scroll
+        let skillsAnimated = false;
+        window.addEventListener('scroll', function() {
+            if (!skillsAnimated) {
+                const skillsSection = document.getElementById('skills');
+                const rect = skillsSection.getBoundingClientRect();
+                
+                if (rect.top < window.innerHeight * 0.8) {
+                    animateSkillBars();
+                    skillsAnimated = true;
+                }
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a127fb271415ae',t:'MTc1OTcxMTczOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98a16c4570092522',t:'MTc1OTcxNDUzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
-        
-            
-   
-   
-        
