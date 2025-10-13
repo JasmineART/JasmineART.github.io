@@ -1,0 +1,146 @@
+/* General Reset and Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: #004d99; /* Professional blue */
+}
+
+/* Timeline Container */
+.timeline {
+    width: 90%;
+    max-width: 1000px; /* Limits the overall width */
+    margin: 0 auto;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Create the vertical line down the center of the timeline */
+.timeline ul::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #ccc; /* Light grey line */
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Center the line */
+    margin-left: -2px;
+    z-index: 1;
+}
+
+/* Timeline Item (The Job) */
+.timeline ul li {
+    padding: 20px 0;
+    position: relative;
+    width: 50%;
+    /* Alternating left/right positioning for a cleaner layout */
+    margin-bottom: 20px; 
+}
+
+/* Content Box Styling */
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2; /* Ensures content is above the line */
+}
+
+/* Positioning the timeline items (alternating sides) */
+
+/* Left Side Items (Even children) */
+.timeline ul li:nth-child(even) {
+    left: 0;
+    padding-right: 30px; /* Space for the line and dot */
+}
+
+/* Right Side Items (Odd children) */
+.timeline ul li:nth-child(odd) {
+    left: 50%;
+    padding-left: 30px; /* Space for the line and dot */
+}
+
+/* Create the dots on the timeline line */
+.timeline ul li::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #004d99; /* Blue dot */
+    top: 30px; /* Vertical positioning */
+    z-index: 3;
+    /* Position the dot based on which side the content is on */
+}
+
+.timeline ul li:nth-child(even)::before {
+    right: -10px; /* Position dot on the line for left-side boxes */
+}
+
+.timeline ul li:nth-child(odd)::before {
+    left: -10px; /* Position dot on the line for right-side boxes */
+}
+
+/* Content Details Styling */
+.job-title {
+    color: #004d99;
+    margin-top: 0;
+}
+
+.company {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.dates {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.duties {
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+/* Responsive Design for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    /* Collapse to a single-sided timeline */
+    .timeline ul::after {
+        left: 20px; /* Move the line to the left */
+    }
+
+    .timeline ul li {
+        width: 100%;
+        left: 0 !important; /* Force all items to the left */
+        padding-left: 40px; /* Space for the line and dot */
+        padding-right: 0;
+    }
+
+    /* Adjust dot position for the new single-sided layout */
+    .timeline ul li::before {
+        left: 14px;
+        right: auto;
+    }
+}
